@@ -3,6 +3,8 @@ fn factorial(num: u64) -> u64 {
     // defined as `1 * 2 * 3 * … * num`.
     // https://en.wikipedia.org/wiki/Factorial
     //
+    //
+    //
     // Do not use:
     // - early returns (using the `return` keyword explicitly)
     // Try not to use:
@@ -10,6 +12,20 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    //
+    // if num == 0 {
+    //     return 1;
+    // }
+
+    // num * factorial(num - 1)
+
+    let mut result = 1;
+
+    for x in 2..=num {
+        result *= x;
+    }
+
+    result
 }
 
 fn main() {
